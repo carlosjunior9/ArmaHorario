@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Organizador de Horarios</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>Organizador de Horarios</h1>
+
+<div class="botones">
+<button onclick="abrirFormulario()">Añadir materia</button>
+<button onclick="abrirEditor()">Editar</button>
+<button onclick="descargarHorario()">Descargar</button>
+</div>
+
+<div id="horario"></div>
+
+<!-- FORMULARIO -->
+<div id="formulario" class="modal">
+<div class="modalContenido scrollable">
+
+<h2>Añadir Materia</h2>
+
+<label>Materia</label>
+<input id="materia">
+
+<label>Grupo</label>
+<input id="grupo">
+
+<div id="diasContainer"></div>
+
+<button onclick="agregarDia()">+ Agregar día</button>
+
+<label>Color</label>
+<input type="color" id="color">
+
+<div class="acciones">
+<button onclick="guardarMateria()">Guardar</button>
+<button onclick="cerrarFormulario()">Cancelar</button>
+</div>
+
+</div>
+</div>
+
+<!-- EDITAR -->
+<div id="editor" class="modal">
+<div class="modalContenido">
+
+<h2>Editar materia</h2>
+
+<select id="listaMaterias"></select>
+
+<div class="acciones">
+<button onclick="editarMateria()">Editar</button>
+<button onclick="eliminarMateria()">Eliminar</button>
+<button onclick="cerrarEditor()">Cerrar</button>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
